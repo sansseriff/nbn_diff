@@ -1,0 +1,61 @@
+site_name: Building Diff-SNSPDs
+# docs_dir: docs
+theme:
+  name: material
+  logo: ./site_images/logo.svg
+  favicon: ./site_images/favicon.png
+  palette: 
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate 
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.instant
+    - navigation.instant.prefetch
+
+
+markdown_extensions:
+  - attr_list
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+# plugins:
+#   - pub-debugger
+#   - pub-obsidian:
+#       obsidian_dir: .obsidian
+#       templates_dir: _templates
+#       backlinks:
+#         enabled: true
+#       callouts:
+#         enabled: true
+#         indentation: spaces
+#       comments:
+#         enabled: true
+#         inject_as_html: false
+#       links:
+#         wikilinks_enabled: true
+#         img_lazy: true
+
+plugins:
+  - mkdocs-pdf
+
+nav:
+  - index.md
+  - Mechanics: mechanics.md
+  - Packaging: packaging.md
+  - Installation: installation.md
+  - Readout: readout.md
