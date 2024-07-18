@@ -5,7 +5,6 @@
 
 ![snspd_hero](./attachments/diff_snspd_hero.jpg)
 
-
 ### Tasks
 ```mermaid
 graph TD
