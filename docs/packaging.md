@@ -8,10 +8,10 @@
 
 <div style="display: flex; height: 300px;">
     <div style="flex: 1; height: 100%;">
-        <img src="/attachments/shunt_PCB_image.png" alt="shunt PCB" style="height: 100%; width: auto; object-fit: scale-down;">
+        <img src="./attachments/shunt_PCB_image.png" alt="shunt PCB" style="height: 100%; width: auto; object-fit: scale-down;">
     </div>
     <div style="flex: 1; height: 100%;">
-        <img src="/attachments/shunt_pcb_mounted.jpg" alt="shunt PCB picture" style="height: 100%; width: auto; object-fit: scale-down;">
+        <img src="./attachments/shunt_pcb_mounted.jpg" alt="shunt PCB picture" style="height: 100%; width: auto; object-fit: scale-down;">
     </div>
 </div>
 
