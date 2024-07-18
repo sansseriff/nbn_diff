@@ -17,6 +17,8 @@ Alternatively, view the design PDFs here:
 
 Take some solder that is **1.55 mm** thick, a wrap it around a **#35** drill bit (diameter 0.11 inch). This creates a sort of helicoil structure. Cut along the length of the coil to create a series of solder rings with the same inner diameter as the outer diameter of the drill bit. Flatten each ring, and drop one each into the SMA holes on the gold plated SMA package. 
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/moFOLqQ5Ais?si=26eJrzLEOWp0P7-Z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 !!! TODO
     get info on the "spark plug" structures used to solder the SMA pins
 
