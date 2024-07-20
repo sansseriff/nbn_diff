@@ -59,3 +59,7 @@ nav:
   - Packaging: packaging.md
   - Installation: installation.md
   - Readout: readout.md
+
+
+extra_javascript:
+  - ./attachments/mermaid.min.js
