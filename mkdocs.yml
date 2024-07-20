@@ -62,4 +62,4 @@ nav:
 
 
 extra_javascript:
-  - ./attachments/mermaid.min.js
+  - attachments/mermaid.min.js
