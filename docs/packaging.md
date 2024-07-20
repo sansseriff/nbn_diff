@@ -21,11 +21,11 @@ The shunt resistor PCB is soldered onto the main gold-plated differential SMA pa
 
 As manufactured, the shunt PCB is populated with:
 
-| number | type  | value | size (in)  | serial number |
-|--------|-------|-------|------|---------------|
-| 1x      | capacitor |   ~0.43 nF | 0805 |               |
-| 2x      | resistor      | 50Ω | 0402 (1x0.5mm) |               |
-| 2x      | inductor      | 0.47 µH |      | 506WLSM0R47KT815T|
+| number | type      | value    | size           | serial number       |
+|--------|-----------|----------|----------------|---------------------|
+| 1x     | capacitor | ~0.43 nF | 0805           |                     |
+| 2x     | resistor  | 50Ω      | 0402 (1x0.5mm) |                     |
+| 2x     | inductor  | 0.47 µH  |                | 506WLSM0R47KT815T   |
 
 
 
