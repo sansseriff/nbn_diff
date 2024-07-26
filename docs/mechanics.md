@@ -15,12 +15,12 @@ Alternatively, view the design PDFs here:
 
 ### Installing center pin
 
+For soldering the SMA center pin parts (part 142-1000-004, [Digikey](https://www.digikey.com/en/products/detail/cinch-connectivity-solutions-johnson/142-1000-004/4864611?s=N4IgTCBcDaIIwBYwFo4AYPIwkBdAvkA)) into the detector package. 
+
 Take some solder that is **1.55 mm** thick, a wrap it around a **#35** drill bit (diameter 0.11 inch). This creates a sort of helicoil structure. Cut along the length of the coil to create a series of solder rings with the same inner diameter as the outer diameter of the drill bit. Flatten each ring, and drop one each into the SMA holes on the gold plated SMA package. 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/moFOLqQ5Ais?si=26eJrzLEOWp0P7-Z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-!!! TODO
-    get info on the "spark plug" structures used to solder the SMA pins
 
 Then, drop the *spark plug* piece into each SMA hole, over the solder ring. Take the structure to the solder oven. Place the mounts **with the SMA holes facing up** on the oven plate, and begin a heating cycle. 
 

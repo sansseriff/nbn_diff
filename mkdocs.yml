@@ -59,6 +59,7 @@ nav:
   - Packaging: packaging.md
   - Installation: installation.md
   - Readout: readout.md
+  - Orders: orders.md
 
 
 extra_javascript:
