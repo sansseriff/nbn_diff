@@ -13,3 +13,8 @@ The circuit board drawings can be downloaded [here](./attachments/Diff_bias_T.zi
 
 ### Layout
 ![Part Layout](./attachments/Bias_Tee_Layout.jpg)
+
+
+### Apply solder mask
+
+Download the solder mask from [here](./attachments/solder_mask.gtp)

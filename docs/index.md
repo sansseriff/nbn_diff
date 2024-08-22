@@ -15,7 +15,7 @@ Certain steps of building the differential SNSPDs must happen in order.
 ```mermaid
 graph TD
     G[<a href='./packaging/#shunt-PCB'>Populate shunt PCB</a>] --> B
-    EE[Build differential Bias-T] --> E[<a href='./readout/#readout'>Prepare readout electronics</a>]
+    EE[<a href='./readout/#apply-solder-mask'>Populate differential Bias-T</a>] --> E[<a href='./readout/#readout'>Prepare readout electronics</a>]
     E --> F[Install in cryostat and test]
     AA[<a href='./mechanics/#detector-packages-with-sapphire-rods'>Order machined differential package and cap</a>] -->A[<a href='./mechanics/#install-sma-ports'>Install SMA ports</a>]
     A --> B[Mount shunt PCB to package]
