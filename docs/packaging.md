@@ -47,3 +47,15 @@ One method for installing the detector in the ferrule sleeve is shown in the vid
 <iframe width="560" height="315" src="https://www.youtube.com/embed/T0ASwPOWdbc?si=BeAsV9GJEB3OgUI0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 There's another method too, whereby you keep the SNSPD on a flat surface, and press the ferrule sleeve down onto it from above. Its possible that this method works fine, but only when the fit between the SNSPD and the ferrule isn't too tight.
+
+## Wire bonding
+
+It can be nice to measure the resistance of the SNSPDs. If they haven't been proved in a cryogenic probe station, measuring the resistance can give you higher confidence that the detector will function. Because of the shunt PCB and it's integrated 100 Ω resistance between the differential channels, measuring the detector resistance after packaging is not possible. You would simply measure 100 Ω, instead of the ~10 MΩ of the SNSPD itself.
+
+To gain the some peace of mind that you are packaging a functioning SNSPD, you can measure the resistance as part of the wire bonding process. DO this by cutting a sliver of copper coated FR4, and scraping the copper off in a region in the middle. Thereby making a strip of material with two pads you can wire bond the SNSPD to temporarily. Then, measure the resistance across these pads. If you do this at the wire bonder, the added time from bonding to the strip of FR4, measuring resistance, breaking the bonds, and then re-bonding to the shunt PCB isn't too significant.
+
+The strip of FR4 taped to the package for temporary wire bonding:
+![Differential Bias Tee](./attachments/pad_on_top.jpg)
+
+The strip of FR4 by itself
+![Differential Bias Tee](./attachments/pad_side.jpg)

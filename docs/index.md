@@ -15,17 +15,17 @@ graph TD
     E --> F[Install in cryostat and test]
     AA[<a href='./mechanics/#detector-packages-with-sapphire-rods'>Order machined differential package and cap</a>] -->A[<a href='./mechanics/#install-sma-ports'>Install SMA ports</a>]
     A --> B[<a href='./packaging/#install-shunt-pcb'>Mount shunt PCB to package</a>]
-    B --> C[Install SNSPD in package-mounted ferrule]
-    C --> D[Wirebond SNSPD to shunt PCB]
+    B --> C[<a href='./packaging/#packaging'>Install SNSPD in package-mounted ferrule</a>]
+    C --> D[<a href='./packaging/#wire-bonding'>Wirebond SNSPD to shunt PCB</a>]
     D --> F
 ```
 
 <!-- [link to other thing](./packaging/#Other-thing) -->
 
-!!! TODO
-Eventually all these steps should have link to explanatory sections.
+<!-- !!! TODO
+Eventually all these steps should have link to explanatory sections. -->
+<!--
+### Orders -->
 
-### Orders
-
-!!! TODO
-Pasternack and Digikey orders here
+<!-- !!! TODO
+Pasternack and Digikey orders here -->
