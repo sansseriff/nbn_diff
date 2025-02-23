@@ -23,6 +23,9 @@ theme:
     - navigation.instant
     - navigation.instant.prefetch
 
+repo_url: https://github.com/sansseriff/nbn_diff
+repo_name: sansseriff/nbn_diff
+
 markdown_extensions:
   - toc:
       permalink: true
