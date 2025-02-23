@@ -35,7 +35,7 @@ As manufactured, the shunt PCB is populated with:
 
 - Apply solder paste to the gold plated detector package, with SMA center pins installed. You will hav to place down the PCB, then slide it underneath the SMA pins protruding through the small machined holes in the package. Three small dots of paste should be enough.
 - Do NOT add solder paste between the SMA pins and the corresponding pads on the shunt PCB package at this stage. If you do this, there is a high chance that solder will flow into the hole through which the SMA pin travels, thereby shorting the center pin to ground.
-- Head up whole package and PCB in the oven.
+- Head up whole package and PCB in the oven. This is the second use of the solder oven, as it was previously used to solder in the SMA center pins.
 - After the package has cooled, you can solder the SMA center pins to the shunt PCB package with a soldering iron.
 
 Note: you shouldn't need to have the [SMA connector](https://www.hasco-inc.com/connectors/220-502sf-super-sma-jack-female-thread-in-accepts-pin-dia-020/) installed into the package when you put the whole thing in the oven to solder on the shunt PCB. The center pin -- already soldered in place -- shouldn't move much when it's re-flowed

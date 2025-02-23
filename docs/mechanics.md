@@ -24,6 +24,8 @@ Then, drop the _spark plug_ piece into each SMA hole, over the solder ring. Take
 
 ### Screwing in the SMA ports after soldering center pin
 
+NOTE: We have tried installing the SMA ports before and after the shunt PCB is mounted to the package by heating up the package in the solder oven. The benefit of installing the SMA ports first is that you can be sure the the soldered center pins will not dislodge in the 2nd round of oven heating. The potential downside is you're heating up the plastic material inside the SMA port. As the diagram on the main page is laid out, the shunt PCB package is installed before adding the SMA ports. With this order, we haven't observed the center pins to dislodge much. You can still screw on the port after. So while heating the SMA ports also wasn't observed to damage them significantly, we don't see a major downside to installing them after the shunt PCB heating step.
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/jsAHK2aODkM?si=ksNBcjVCz038-kgO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 [This](https://www.hasco-inc.com/tools/thread-in-install-tool-sma-2-92mm-and-3-5mm/) is the installation tool shown in the video. Though, it's out of stock at the time of writing. We found that using two hex nuts with the same threading as the SMA connector could be used to achieve the same result. Also, with two nuts, it may be more clear how the installation process works:
