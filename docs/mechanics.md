@@ -20,7 +20,14 @@ Take some solder that is **1.55 mm** thick, a wrap it around a **#35** drill bit
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/moFOLqQ5Ais?si=26eJrzLEOWp0P7-Z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-Then, drop the _spark plug_ piece into each SMA hole, over the solder ring. Take the structure to the solder oven. Place the mounts **with the SMA holes facing up** on the oven plate, and begin a heating cycle.
+Then, drop the _spark plug_ piece into each SMA hole, over the solder ring.
+
+!!! Note
+    The pins on the **SMA center pin part** are different lengths. The longer pin side should be dropped down into the machined mount. The shorter pin will insert into the SMA connector.
+
+Take the structure to the solder oven. Place the mounts **with the SMA holes facing up** on the oven plate, and begin a heating cycle.
+
+After this first heating cycle, try sliding a shunt PCB underneath the pins protruding out into the flat area of the machined SNSPD mount. You should see that they are a bit to long to interface nicely with the solder pads on the shunt PCB. Now is a good time to clip them to a shorter length, before soldering down the PCB. 
 
 ### Screwing in the SMA ports after soldering center pin
 
