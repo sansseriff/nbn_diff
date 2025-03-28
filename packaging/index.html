@@ -1,0 +1,659 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../mechanics/">
+      
+      
+        <link rel="next" href="../readout/">
+      
+      
+      <link rel="icon" href="../site_images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.9">
+    
+    
+      
+        <title>Packaging - Building Diff-SNSPDs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.4af4bdda.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#shunt-pcb" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Building Diff-SNSPDs" class="md-header__button md-logo" aria-label="Building Diff-SNSPDs" data-md-component="logo">
+      
+  <img src="../site_images/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Building Diff-SNSPDs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Packaging
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/sansseriff/nbn_diff" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    sansseriff/nbn_diff
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Building Diff-SNSPDs" class="md-nav__button md-logo" aria-label="Building Diff-SNSPDs" data-md-component="logo">
+      
+  <img src="../site_images/logo.svg" alt="logo">
+
+    </a>
+    Building Diff-SNSPDs
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/sansseriff/nbn_diff" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    sansseriff/nbn_diff
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mechanics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mechanics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Packaging
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Packaging
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#shunt-pcb" class="md-nav__link">
+    <span class="md-ellipsis">
+      Shunt PCB
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Shunt PCB">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#manufacture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Manufacture
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Manufacture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#manufacture_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Manufacture:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-shunt-pcb" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install Shunt PCB
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#packaging" class="md-nav__link">
+    <span class="md-ellipsis">
+      Packaging
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wire-bonding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wire bonding
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../readout/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Readout
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../orders/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Orders
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#shunt-pcb" class="md-nav__link">
+    <span class="md-ellipsis">
+      Shunt PCB
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Shunt PCB">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#manufacture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Manufacture
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Manufacture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#manufacture_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Manufacture:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-shunt-pcb" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install Shunt PCB
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#packaging" class="md-nav__link">
+    <span class="md-ellipsis">
+      Packaging
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wire-bonding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wire bonding
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+  <h1>Packaging</h1>
+
+<div><h2 id="shunt-pcb">Shunt PCB<a class="headerlink" href="#shunt-pcb" title="Permanent link">¶</a></h2>
+<!-- ![shunt PCB](./attachments/shunt_PCB_image.png)
+
+![shunt PCB picture](./attachments/shunt_pcb_mounted.jpg) -->
+
+<div style="display: flex; height: 300px;">
+    <div style="flex: 1; height: 100%;">
+        <img src="../attachments/shunt_PCB_image.png" alt="shunt PCB" style="height: 100%; width: auto; object-fit: scale-down;">
+    </div>
+    <div style="flex: 1; height: 100%;">
+        <img src="../attachments/shunt_pcb_mounted.jpg" alt="shunt PCB picture" style="height: 100%; width: auto; object-fit: scale-down;">
+    </div>
+</div>
+
+<p>The shunt resistor PCB is soldered onto the main gold-plated differential SMA package. Altium files related to it are available <a download="diff_shunt_interface.zip" href="../attachments/diff_shunt_interface.zip">here</a></p>
+<p>As manufactured, the shunt PCB is populated with:</p>
+<table>
+<thead>
+<tr>
+<th>number</th>
+<th>type</th>
+<th>value</th>
+<th>size</th>
+<th>serial number</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1x</td>
+<td>capacitor</td>
+<td>~0.43 nF</td>
+<td>0805</td>
+<td></td>
+</tr>
+<tr>
+<td>2x</td>
+<td>resistor</td>
+<td>50Ω</td>
+<td>0402 (1x0.5mm)</td>
+<td></td>
+</tr>
+<tr>
+<td>2x</td>
+<td>inductor</td>
+<td>0.47 µH</td>
+<td></td>
+<td>506WLSM0R47KT815T</td>
+</tr>
+</tbody>
+</table>
+<h3 id="manufacture">Manufacture<a class="headerlink" href="#manufacture" title="Permanent link">¶</a></h3>
+<h4 id="manufacture_1">Manufacture:<a class="headerlink" href="#manufacture_1" title="Permanent link">¶</a></h4>
+<ul>
+<li>Apply solder paste with solder mask</li>
+<li>Populate PCB with pick and place machine</li>
+<li>Heat up in oven or on hot plate</li>
+</ul>
+<h2 id="install-shunt-pcb">Install Shunt PCB<a class="headerlink" href="#install-shunt-pcb" title="Permanent link">¶</a></h2>
+<ul>
+<li>Apply solder paste to the gold plated detector package, with SMA center pins installed. You will hav to place down the PCB, then slide it underneath the SMA pins protruding through the small machined holes in the package. Three small dots of paste should be enough.</li>
+<li>Do NOT add solder paste between the SMA pins and the corresponding pads on the shunt PCB package at this stage. If you do this, there is a high chance that solder will flow into the hole through which the SMA pin travels, thereby shorting the center pin to ground.</li>
+<li>Head up whole package and PCB in the oven. This is the second use of the solder oven, as it was previously used to solder in the SMA center pins.</li>
+<li>After the package has cooled, you can solder the SMA center pins to the shunt PCB package with a soldering iron.</li>
+</ul>
+<p>Note: you shouldn't need to have the <a href="https://www.hasco-inc.com/connectors/220-502sf-super-sma-jack-female-thread-in-accepts-pin-dia-020/">SMA connector</a> installed into the package when you put the whole thing in the oven to solder on the shunt PCB. The center pin -- already soldered in place -- shouldn't move much when it's re-flowed</p>
+<h2 id="packaging">Packaging<a class="headerlink" href="#packaging" title="Permanent link">¶</a></h2>
+<p>One method for installing the detector in the ferrule sleeve is shown in the video. It involves holding the ferrule sleeve with a vise and tweezers, and dropping the SNSPD onto it upside down.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/T0ASwPOWdbc?si=BeAsV9GJEB3OgUI0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<p>There's another method too, whereby you keep the SNSPD on a flat surface, and press the ferrule sleeve down onto it from above. Its possible that this method works fine, but only when the fit between the SNSPD and the ferrule isn't too tight.</p>
+<h2 id="wire-bonding">Wire bonding<a class="headerlink" href="#wire-bonding" title="Permanent link">¶</a></h2>
+<p>It can be nice to measure the resistance of the SNSPDs. If they haven't been proved in a cryogenic probe station, measuring the resistance can give you higher confidence that the detector will function. Because of the shunt PCB and it's integrated 100 Ω resistance between the differential channels, measuring the detector resistance after packaging is not possible. You would simply measure 100 Ω, instead of the ~10 MΩ of the SNSPD itself.</p>
+<p>To gain the some peace of mind that you are packaging a functioning SNSPD, you can measure the resistance as part of the wire bonding process. DO this by cutting a sliver of copper coated FR4, and scraping the copper off in a region in the middle. Thereby making a strip of material with two pads you can wire bond the SNSPD to temporarily. Then, measure the resistance across these pads. If you do this at the wire bonder, the added time from bonding to the strip of FR4, measuring resistance, breaking the bonds, and then re-bonding to the shunt PCB isn't too significant.</p>
+<p>The strip of FR4 taped to the package for temporary wire bonding:
+<img alt="Differential Bias Tee" src="../attachments/pad_on_top.jpg"></p>
+<p>The strip of FR4 by itself
+<img alt="Differential Bias Tee" src="../attachments/pad_side.jpg"></p></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.instant.prefetch"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+        <script src="../attachments/mermaid.min.js"></script>
+      
+    
+  </body>
+</html>
