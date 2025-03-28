@@ -62,7 +62,7 @@ nav:
   - index.md
   - Mechanics: mechanics.md
   - Packaging: packaging.md
-  - Installation: installation.md
+  # - Installation: installation.md
   - Readout: readout.md
   - Orders: orders.md
 
