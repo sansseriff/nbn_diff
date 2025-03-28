@@ -29,6 +29,7 @@ Take the structure to the solder oven. Place the mounts **with the SMA holes fac
 
 After this first heating cycle, try sliding a shunt PCB underneath the pins protruding out into the flat area of the machined SNSPD mount. You should see that they are a bit to long to interface nicely with the solder pads on the shunt PCB. Now is a good time to clip them to a shorter length, before soldering down the PCB. 
 
+
 ### Screwing in the SMA ports after soldering center pin
 
 NOTE: We have tried installing the SMA ports before and after the step where the shunt PCB is mounted to the package by heating it up in the solder oven. The benefit of installing the SMA ports first is that you can be sure the the soldered center pins will not dislodge in the 2nd round of oven heating. The potential downside is you're heating up the plastic material inside the SMA port. As the diagram on the main page is laid out, the shunt PCB package is installed before adding the SMA ports. With this order, we haven't observed the center pins to dislodge much. You can still screw on the port after. So while heating the SMA ports also wasn't observed to damage them significantly, we don't see a major downside to installing them after the shunt PCB heating step.
